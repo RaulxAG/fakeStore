@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: #333;
+    background-image:  linear-gradient(30deg, #444 12%, transparent 12.5%, transparent 87%, #444 87.5%, #444),linear-gradient(150deg, #444 12%, transparent 12.5%, transparent 87%, #444 87.5%, #444),linear-gradient(30deg, #444 12%, transparent 12.5%, transparent 87%, #444 87.5%, #444),linear-gradient(150deg, #444 12%, transparent 12.5%, transparent 87%, #444 87.5%, #444),linear-gradient(60deg, #555 25%, transparent 25.5%, transparent 75%, #555 75%, #555),linear-gradient(60deg, #555 25%, transparent 25.5%, transparent 75%, #555 75%, #555);
+    background-size: 20px 35px;
+    background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px; */
+    background-color: #1c1c1c;
+    opacity: 0.95;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #1c1c1c 16px ), repeating-linear-gradient( #988b5755, #988b57 );
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header h1 a{
+    color: #caa934;
+    text-decoration: none;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+header nav ul li a{
+    font-size: 1.2rem;
+    color: #caa934;
+    text-decoration: none;
+}
+
+#buscar {
+    background-image: url(../assets/img/lupa.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: #555;
+    border: 2px inset #caa934;
+}
+
+main {
+    border-radius: 10px;
+    padding: 20px 10px;
+    background-color: #2D291A;
+    width: 80%;
+    margin: auto;
+}
+
+main form {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.products {
+    padding: 1%;
+    margin: auto;
+    /* background-color: antiquewhite; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1%;
+    justify-items: center;
+}
+
+.products__card {
+    background-color: #222;
+    border-radius: 10px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    color: #CCC;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card__image {
+    width: 50%;
+    margin-bottom: .8rem;
+}
+
+.card__name {
+    text-align: center;
+    width: 80%;
+    margin-bottom: .5rem;
+}
+
+.card__price {
+    color: #caa934;
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
+}
+
+.card__button {
+    background: none;
+    border: 2px inset #caa934;
+    color: #aaa;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .1s linear;
+    margin-bottom: .5rem;
+}
+
+.card__button:hover {
+    color: white;
+    background-color: #76621e;
+    border: 2px outset #caa934;
+}
+
+.card__button:active {
+    color: white;
+    background-color: #4f4114;
+}
+
+.card__detail {
+    color: white;
+    font-size: 12px;
+}
+
+/* Estilos Login */
+#mainInicioSesion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding-bottom: 20%;
+}
+
+#mainInicioSesion h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #caa934;
+    text-transform: uppercase;
+}
+
+#formularioInicioSesion {
+    display: flex;
+    width: 40%;
+    margin: auto;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#formularioInicioSesion label {
+    text-align: left;
+    color: #AAA;
+}
+
+#formularioInicioSesion input {
+    padding: 5px;
+    border: 2px solid #caa934;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+}
+
+#formularioInicioSesion input[type="submit"] {
+    width: 50%;
+    align-self: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px inset #caa934;
+    transition: all .1s linear;
+}
+
+#formularioInicioSesion input[type="submit"]:hover {
+    border: 2px outset #caa934;
+    background-color: #76621e;
+}
+
+#formularioInicioSesion input[type="submit"]:active {
+    background-color: #4f4114;
+}
+
+/* Estilos Detalle */
+.bodyDetalle {
+    height: 100vh;
+}
+
+.detalle__titulo {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #caa934;
+    text-align: center;
+}
+
+.detalle__price {
+    color: #caa934;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.producto__detalle {
+    gap: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.detalle__description {
+    width: 30%;
+}
+
+/* Estilos carrito */
+.bodyCarrito {
+    height: 100vh;
+}
+
+.cart__product {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: whitesmoke;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #222;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    width: 60%;
+    margin: 15px auto;
+}
+
+.cart__product__info {
+    display: flex;
+    gap: 15px;
+}
+
+.cart__product__title {
+    text-align: left;
+    align-self: center;
+}
+
+.cart__product__buttons {
+    display: flex;
+    align-items: center;
+}
+
+.cart__product__quantity {
+    width: 2rem;
+    line-height: 1.5rem;
+    text-align: center;
+    background-color: #76621e;
+}
+
+.cart__product__buttons button {
+    height: 24px;
+    width: 1.4rem;
+    background-color: #caa934;
+    border: none;
+    font-weight: bold;
+    color: #333;
+    border-radius: 5px 0 0 5px;
+    cursor: pointer;
+}
+
+.cart__product__buttons button:active {
+    background-color: #4f4114;
+    color: white;
+}
+
+.cart__product__buttons button:last-child {
+    border-radius: 0 5px 5px 0;
+}
+
+.cart__buy__container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.cart__buy {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: lightgreen;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cart__buy:active {
+    background-color: rgb(92, 157, 92);
+}
+
+.mainCarrito h2 {
+    display: flex;
+    flex-direction: column;
+    color: #caa934;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
