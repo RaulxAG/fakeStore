@@ -35,7 +35,7 @@ window.onload = function () {
             let actualQuantity = parseInt(quantity.innerHTML);
             quantity.innerHTML = actualQuantity + 1;
 
-            updateLocalStorageQuantity(productFromArray.productId, actualQuantity + 1);
+            updateLocalStorageQuantity(productFromArray.id, actualQuantity + 1);
         });
 
         let restar = document.createElement("button");
@@ -46,15 +46,15 @@ window.onload = function () {
             if (actualQuantity - 1 === 0) {
                 if (confirm('¿Desea eliminar el producto?')) {
                     product.remove();
-                    removeProductFromLocalStorage(productFromArray.productId);
+                    removeProductFromLocalStorage(productFromArray.id);
                 }
             } else {
                 // Update the quantity in HTML and localStorage
                 quantity.innerHTML = actualQuantity - 1;
-                updateLocalStorageQuantity(productFromArray.productId, actualQuantity - 1);
+                updateLocalStorageQuantity(productFromArray.id, actualQuantity - 1);
             }
 
-            updateLocalStorageQuantity(productFromArray.productId, actualQuantity + 1);
+            updateLocalStorageQuantity(productFromArray.id, actualQuantity + 1);
         });
 
         botones.appendChild(restar);
@@ -81,19 +81,28 @@ window.onload = function () {
 
     function updateLocalStorageQuantity(productId, newQuantity) {
         carrito.products.forEach(product => {
-            if (product.productId === productId) {
+            if (product.id === productId) {
                 product.quantity = newQuantity;
             }
         });
 
         localStorage.setItem('Carrito', JSON.stringify(carrito));
+
+        if (carrito.products.length === 0) {
+            comprarDiv.remove();
+        }
     }
 
     function removeProductFromLocalStorage(productId) {
-        carrito.products = carrito.products.filter(product => product.productId !== productId);
+        carrito.products = carrito.products.filter(product => product.id !== productId);
 
         localStorage.setItem('Carrito', JSON.stringify(carrito));
+        if (carrito.products.length === 0) {
+            comprarDiv.remove();
+        }
     }
 
-    main.appendChild(comprarDiv);
+    if (!(carrito.products.length === 0)) {
+        main.appendChild(comprarDiv);   
+    }
 }
