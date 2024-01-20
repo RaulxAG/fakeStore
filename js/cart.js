@@ -87,19 +87,12 @@ window.onload = function () {
         });
 
         localStorage.setItem('Carrito', JSON.stringify(carrito));
-
-        if (carrito.products.length === 0) {
-            comprarDiv.remove();
-        }
     }
 
     function removeProductFromLocalStorage(productId) {
         carrito.products = carrito.products.filter(product => product.productId !== productId);
 
         localStorage.setItem('Carrito', JSON.stringify(carrito));
-        if (carrito.products.length === 0) {
-            comprarDiv.remove();
-        }
     }
 
     if (!(carrito.products.length === 0)) {
