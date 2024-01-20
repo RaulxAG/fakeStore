@@ -107,7 +107,7 @@ window.onload = function () {
 
             let product__detail = document.createElement("a");
             product__detail.className = "card__detail";
-            product__detail.href = "detalle.html?id=" + element.id;
+            product__detail.href = "pages/detalle.html?id=" + element.id;
             product__detail.innerHTML = "Ver detalles";
   
             card.appendChild(product_image);
