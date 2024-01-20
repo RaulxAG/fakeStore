@@ -95,7 +95,5 @@ window.onload = function () {
         localStorage.setItem('Carrito', JSON.stringify(carrito));
     }
 
-    if (!(carrito.products.length === 0)) {
-        main.appendChild(comprarDiv);   
-    }
+    main.appendChild(comprarDiv);
 }
