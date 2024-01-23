@@ -161,7 +161,7 @@ main form {
     color: #AAA;
 }
 
-#formularioInicioSesion input {
+#formularioInicioSesion input, .sessionClose {
     padding: 5px;
     border: 2px solid #caa934;
     border-radius: 5px;
@@ -169,7 +169,7 @@ main form {
     color: white;
 }
 
-#formularioInicioSesion input[type="submit"] {
+#formularioInicioSesion input[type="submit"], .sessionClose {
     width: 50%;
     align-self: center;
     padding: 10px 20px;
@@ -178,12 +178,12 @@ main form {
     transition: all .1s linear;
 }
 
-#formularioInicioSesion input[type="submit"]:hover {
+#formularioInicioSesion input[type="submit"]:hover, .sessionClose:hover {
     border: 2px outset #caa934;
     background-color: #76621e;
 }
 
-#formularioInicioSesion input[type="submit"]:active {
+#formularioInicioSesion input[type="submit"]:active, .sessionClose:active {
     background-color: #4f4114;
 }
 

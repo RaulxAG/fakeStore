@@ -1,4 +1,5 @@
 window.onload = function () {
+   if (localStorage.getItem('Carrito')) {
     let main = document.getElementsByTagName("main")[0];
 
     let carrito = JSON.parse(localStorage.getItem('Carrito'));
@@ -54,7 +55,7 @@ window.onload = function () {
                 updateLocalStorageQuantity(productFromArray.id, actualQuantity - 1);
             }
 
-            updateLocalStorageQuantity(productFromArray.id, actualQuantity + 1);
+            updateLocalStorageQuantity(productFromArray.id, actualQuantity - 1);
         });
 
         botones.appendChild(restar);
@@ -105,4 +106,8 @@ window.onload = function () {
     if (!(carrito.products.length === 0)) {
         main.appendChild(comprarDiv);   
     }
+   } else {
+      window.location.href = "/fakeStore/index.html";
+      alert("no has iniciado sesion! no puedes acceder al carrito");
+   }
 }
