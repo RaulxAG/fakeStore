@@ -7,17 +7,17 @@ window.onload = function () {
 
   let apiUrl = `https://fakestoreapi.com/products`;
 
-   function loadMoreProducts() {
-      if (loading) return;
-      loading = true;
+  function loadMoreProducts() {
+    if (loading) return;
+    loading = true;
 
-      fetch(apiUrl)
-      .then(res => res.json())
-      .then(json => renderProducts(json))
-      .catch((error) => {
-         alert("Error al intentar obtener más productos: " + error.message);
-      });
-   }
+    fetch(apiUrl)
+    .then(res => res.json())
+    .then(json => renderProducts(json))
+    .catch((error) => {
+        alert("Error al intentar obtener más productos: " + error.message);
+    });
+  }
 
   document.getElementById("filtro").addEventListener("change", function () {
     let filterOption = this.value;
@@ -46,7 +46,7 @@ window.onload = function () {
   });
 
   function LoadingAlert() {
-    alert("Cargando elementos...");
+    console.log("Cargando elementos...");
   }
 
   window.addEventListener('scroll', function () {
