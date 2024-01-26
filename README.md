@@ -2,7 +2,7 @@
 
 deployment url: https://raulxag.github.io/fakeStore/
 
-This branch is a second version with the following features:
+Second version with the following features:
 
 ✔️ 1. Cart/products should not be added or accessed until a user is logged in.
 
